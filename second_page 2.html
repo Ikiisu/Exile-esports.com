@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESports Players</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('wr.png'); /* Add your image path */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        position: fixed; /* Header fixed position */
+        top: 0; /* Fixed position from top */
+        width: 100%; /* Full width */
+        background-color: #1e1d1dc1;
+        color: #fff;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 999; /* Ensure it's on top of other elements */
+    }
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .logo1 {
+       width: 150px;
+       height: auto;
+    }
+    .logo2 {
+       width: 150px;
+       height: auto;
+    }
+    nav {
+        margin-top: 10px;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    .logout-btn {
+        background-color: #aa0b0bb0;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .logout-btn:hover {
+        background-color: #cc0000;
+    }
+    .container {
+        width: 800px; /* Adjust width as needed */
+        margin: 100px auto 50px auto; /* Adjust margin to push content below the header */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .player {
+        margin: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+        flex: 1 1 200px;
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .player:nth-child(even) {
+        animation: slideFromRight 1s ease forwards; /* Alternate animation */
+    }
+    .player:hover {
+        transform: translateY(-10px);
+    }
+    .player img {
+        width: 800px;
+        height: auto;
+        margin-bottom: 10px;
+        transition: transform 0.3s ease;
+    }
+    .player p {
+        font-size: 18px;
+        color: #333;
+    }
+    .player:hover img {
+        transform: scale(1.1);
+    }
+
+    @keyframes slideFromRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    nav a.highlight-link {
+    color: #aa0b0bb0; /* Change the color to your desired color */
+}
+</style>
+</head>
+<body>
+<header>
+    
+    <img src="DSV_LOGO.png" alt="logo1" class="logo1">
+    <img src="exl_logo.png" alt="logo2" class="logo2">
+    <div class="logo">EXILE ESPORTS</div>
+    
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#" class="highlight-link">Highlights</a>
+    </nav>
+   
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</header>
+
+<div class="container">
+    <div class="player">
+        <img src="pat.png" alt="Player 1">
+    </div>
+    <div class="player">
+        <img src="player2.png" alt="Player 2">
+    </div>
+    <div class="player">
+        <img src="player3.png" alt="Player 3">
+    </div>
+    <div class="player">
+        <img src="player4.png" alt="Player 4">
+    </div>
+    <!-- Add more players as needed -->
+</div>
+
+<script>
+    function logout() {
+        // Redirect the first tab to the desired URL
+        window.location.href = "index.html";
+        
+        // Close the current tab
+        window.close();
+    }
+</script>
+
+</body>
+</html>
